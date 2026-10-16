@@ -1,68 +1,37 @@
 # ACE — Agent Continuity Engine
 
+> Sessions are temporary. Project knowledge is persistent.
+>
 > Agents come and go. Your project stays on course.
 
-ACE is a local-first control plane for AI-assisted software
-development.
+ACE is a local-first, human-centered control plane for AI-assisted software development. Working repository name: `ace-control-plane`; product name is provisional.
 
-It helps developers maintain project continuity, preserve
-critical constraints, understand progress, and stay in control
-while working across multiple AI coding agents and sessions.
+Developers working across coding sessions lose track of task progress, decisions, constraints, and where to resume. ACE aims to preserve project knowledge across those sessions and make actual progress understandable through inspectable evidence.
 
-## The Problem
+Its core value is continuity: understand what happened, what changed, what remains, what needs review, and how to continue without reconstructing every conversation. Agent claims must remain distinct from verified results.
 
-AI coding tools are powerful, but their context is fragmented.
+## Initial focus
 
-Developers frequently:
-- Run multiple sessions across Codex and Claude.
-- Split a single task across sessions to manage context usage.
-- Work on several tasks concurrently.
-- Forget which session contains the latest work.
-- Repeat instructions, requirements, and decisions.
-- Lose track of architectural constraints.
-- Struggle to verify what agents actually accomplished.
-- Spend time reconstructing context before resuming work.
+The initial environment is macOS, Git repositories, Codex Desktop, and Claude Desktop local Code sessions. Local-first storage and explicit authorization before sending sensitive data externally are requirements. Desktop integration feasibility is unproven.
 
-The problem isn't a lack of capable agents.
-
-It's a lack of continuity and oversight between them.
-
-## The Vision
-
-ACE provides a persistent project-level control plane
-independent of individual AI sessions.
-
-It aims to answer five questions:
-
-1. What are we trying to accomplish?
-2. What must never be violated?
-3. What has actually been completed?
-4. What requires my attention?
-5. Where and how should I continue?
-
-## Core Principles
-
-- Sessions are temporary. Project knowledge is persistent.
-- Project intent must survive context resets.
-- Critical invariants must be explicit and reviewable.
-- Agent claims are not equivalent to verified results.
-- Humans retain authority over important decisions.
-- Context switching should require minimal effort.
-- Local-first privacy is a fundamental requirement.
-
-## Initial Scope
-
-- macOS
-- Codex Desktop
-- Claude Desktop (local Code sessions)
-- Local session discovery
-- Cross-session task tracking
-- Persistent project knowledge
-- Evidence-backed progress summaries
-- Context recovery and handoffs
+The proposed MVP centers on one question: **“I returned to my project. Where did I leave off?”** Session discovery, task association, persistent knowledge, evidence-backed summaries, and resume context are candidates, not a finalized feature list. Starting as an Intelligent Observer is proposed; active enforcement and orchestration are future possibilities.
 
 ## Status
 
-Discovery / Product Definition
+Product discovery and documentation only. No application, final architecture, dependencies, or feasibility experiment has been implemented. Python is the founder's preferred initial backend language; storage, interface, and integration choices remain open. A commercial product is a possible destination, not a validated business model.
 
-No implementation has been finalized.
+## Documentation
+
+| Document | Canonical responsibility |
+| --- | --- |
+| [Product vision](docs/PRODUCT_VISION.md) | Mission, users, concepts, outcomes, and non-goals |
+| [Problem statement](docs/PROBLEM_STATEMENT.md) | Founder pain points and workflow scenarios |
+| [Product principles](docs/PRODUCT_PRINCIPLES.md) | Invariants, privacy, human authority, evidence standards, and UX |
+| [Requirements](docs/REQUIREMENTS.md) | Confirmed needs, MVP hypotheses, and future candidates |
+| [MVP scope](docs/MVP_SCOPE.md) | Concrete first-release proposal and acceptance scenarios; pending founder review |
+| [Decisions](docs/DECISIONS.md) | Status, authority, rationale, and decision history |
+| [Research](docs/RESEARCH.md) | Sourced findings, integration options, and proposed experiment |
+| [Open questions](docs/OPEN_QUESTIONS.md) | Unresolved risks and validation priorities |
+| [Agent instructions](AGENTS.md) | Practical rules for future repository work |
+
+Read the decisions and requirements before treating any proposed capability as a commitment.
